@@ -11,7 +11,7 @@ export const StoreBox = styled.div`
   object-fit: contain;
 `;
 
-export const Store = styled.img`
+export const StoreImg = styled.img`
   height: 100%;
 `;
 
