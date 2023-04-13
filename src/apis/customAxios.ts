@@ -1,4 +1,5 @@
 import axios from "axios";
+import { accessTokenExpired } from "@/util/auth/accessTokenExpired";
 
 const customAxios = axios.create({
   baseURL: process.env.BASE_URL,
@@ -20,7 +21,7 @@ customAxios.interceptors.response.use(
   },
   (error) => {
     if (error.response.status === 401) {
-      console.log(401);
+      accessTokenExpired();
     }
     return Promise.reject(error);
   }
