@@ -1,14 +1,15 @@
 import { colors } from "@/constants/colors";
 import styled from "styled-components";
 
-export const StarBground = styled.div<{ location: boolean }>`
+export const StarBground = styled.div`
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
   width: 100%;
   height: 100%;
-  background: ${(props) => (props.location ? colors.AUTH_BACKGROUND : colors.MAIN_BACKGROUND)};
+  background: ${colors.MAIN_BACKGROUND};
+
   .star {
     position: absolute;
     width: 2px;
