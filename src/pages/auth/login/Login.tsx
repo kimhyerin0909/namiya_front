@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import { AuthLayout } from "@/components/layout/AuthLayout";
 import * as S from "../Auth.style";
 import { useNavigate } from "react-router-dom";
-import { LOGIN_USER } from "@/types/auth";
+import { USER } from "@/types/auth";
 import { AuthFeature } from "@/features/auth/auth.feature";
 
 export const Login = () => {
-  const [request, setRequest] = useState<LOGIN_USER>({ email: "", password: "" });
+  const [request, setRequest] = useState<USER>({ userId: 0, email: "", password: "" });
   const navigate = useNavigate();
-  const authLogin = AuthFeature();
+  const { authLogin } = AuthFeature();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setRequest({
