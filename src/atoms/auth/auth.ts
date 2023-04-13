@@ -1,9 +1,19 @@
+import { USER } from "@/types/auth";
 import { atom } from "recoil";
+import { recoilPersist } from "recoil-persist";
 
-export const authState = atom({
+const { persistAtom } = recoilPersist({
+  key: "authLocal",
+  storage: localStorage,
+});
+
+export const authState = atom<USER>({
   key: "authState",
   default: {
+    userId: 0,
     nickname: "",
     email: "",
+    password: "",
   },
+  effects_UNSTABLE: [persistAtom],
 });
