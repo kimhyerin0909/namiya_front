@@ -1,6 +1,5 @@
 import { USER } from "@/types/auth";
 import customAxios from "../customAxios";
-import { refreshTokenHeader } from "@/util/auth/headers";
 
 export const login = async (request: USER) => {
   return (await customAxios.post("/auth/login", request)).data;

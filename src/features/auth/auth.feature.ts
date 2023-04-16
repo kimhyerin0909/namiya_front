@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useRecoilState, useResetRecoilState } from "recoil";
 import { authState } from "../../atoms/auth/auth";
 import { useNavigate } from "react-router-dom";
