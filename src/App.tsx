@@ -3,6 +3,7 @@ import { Login } from "./pages/auth/login/Login";
 import { Main } from "./pages/main/Main";
 import { SignUp } from "./pages/auth/signup/SignUp";
 import { Stars } from "./components/shared/stars/Stars";
+import { AuthRequired } from "./components/shared/authRequired/AuthRequired";
 
 const App = () => {
   return (
@@ -10,7 +11,7 @@ const App = () => {
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/" element={<Main />} />
+        <Route path="/" element={<AuthRequired children={<Main />} />} />
       </Routes>
       <Stars />
     </BrowserRouter>
