@@ -31,5 +31,11 @@ export const AuthFeature = () => {
     },
   });
 
-  return { user, setUser, authLogin, authSignUp, resetUser };
+  const authLogout = () => {
+    resetUser();
+    localStorage.clear();
+    navigate("/login");
+  };
+
+  return { user, setUser, authLogin, authSignUp, authLogout };
 };
