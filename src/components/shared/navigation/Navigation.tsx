@@ -1,7 +1,7 @@
 import React from "react";
 import * as S from "./Navigation.style";
 import { useRecoilState } from "recoil";
-import { navState } from "@/atoms/navigation/navigation";
+import { navState } from "@/atoms/navigation/navigation.atom";
 
 export const Navigation = () => {
   const [nav, setNav] = useRecoilState(navState);

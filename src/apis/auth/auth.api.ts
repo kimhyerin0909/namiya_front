@@ -1,4 +1,4 @@
-import { USER } from "@/types/auth";
+import { USER } from "@/types/auth/auth.type";
 import customAxios from "../customAxios";
 
 export const login = async (request: USER) => {

@@ -1,4 +1,4 @@
-import { USER } from "@/types/auth";
+import { USER } from "@/types/auth/auth.type";
 import { atom } from "recoil";
 import { recoilPersist } from "recoil-persist";
 

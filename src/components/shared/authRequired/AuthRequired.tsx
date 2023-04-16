@@ -1,4 +1,4 @@
-import { authState } from "@/atoms/auth/auth";
+import { authState } from "@/atoms/auth/auth.atom";
 import React from "react";
 import { Navigate, useLocation } from "react-router-dom";
 import { useRecoilValue } from "recoil";

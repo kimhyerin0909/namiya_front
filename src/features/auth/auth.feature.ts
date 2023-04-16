@@ -1,10 +1,10 @@
 import React from "react";
 import { useRecoilState, useResetRecoilState } from "recoil";
-import { authState } from "../../atoms/auth/auth";
+import { authState } from "../../atoms/auth/auth.atom";
 import { useNavigate } from "react-router-dom";
 import { useMutation } from "react-query";
-import { login, signup } from "@/apis/auth/index";
-import { LOGIN_RESPONSE } from "@/types/auth";
+import { login, signup } from "@/apis/auth/auth.api";
+import { LOGIN_RESPONSE } from "@/types/auth/auth.type";
 
 export const AuthFeature = () => {
   const navigate = useNavigate();

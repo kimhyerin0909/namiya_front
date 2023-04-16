@@ -1,4 +1,4 @@
-import { colors } from "@/constants/colors";
+import { colors } from "@/constants/colors.constant";
 import styled from "styled-components";
 
 export const LetterBg = styled.div`

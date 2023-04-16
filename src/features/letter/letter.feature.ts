@@ -1,5 +1,5 @@
-import { getMyLetters } from "@/apis/letter";
-import { authState } from "@/atoms/auth/auth";
+import { getMyLetters } from "@/apis/letter/letter.api";
+import { authState } from "@/atoms/auth/auth.atom";
 import { LETTER_KEY } from "@/constants/keys/letter.key";
 import React from "react";
 import { useQuery } from "react-query";
