@@ -22,6 +22,8 @@ customAxios.interceptors.response.use(
   (error) => {
     if (error.response.status === 401) {
       accessTokenExpired();
+    } else {
+      alert(error.response.data.message);
     }
     return Promise.reject(error);
   }
