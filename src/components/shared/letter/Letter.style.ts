@@ -31,3 +31,7 @@ export const LetterArea = styled.textarea`
   );
   line-height: 41px;
 `;
+
+export const Message = styled.span`
+  text-align: center;
+`;

@@ -40,10 +40,6 @@ export const Stars = () => {
     return () => clearInterval(twinkle);
   }, []);
 
-  useEffect(() => {
-    console.log(window.location.pathname);
-  }, [window.location.pathname]);
-
   return (
     <S.StarBground>
       <S.Moon src="/assets/moon.svg" />
