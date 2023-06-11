@@ -10,6 +10,10 @@ export const getTodayLetter = async (userId: number) => {
   return (await customAxios.get(`/letter/today/${userId}`, header())).data;
 };
 
+export const getReplyLetter = async (userId: number) => {
+  return (await customAxios.get(`/letter/reply/${userId}`, header())).data;
+};
+
 export const sendLetter = async (request: LETTER_RESPONSE) => {
   return (await customAxios.post(`/letter/send/${request.userId}`, request.request, header())).data;
 };
