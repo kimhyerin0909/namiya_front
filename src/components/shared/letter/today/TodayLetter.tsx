@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
-import * as S from "./Letter.style";
-import { Button } from "../button/Button";
+import * as S from "./TodayLetter.style";
+import { Button } from "../../button/Button";
 import { useInput } from "@/hooks/useInput";
 import { LetterFeature } from "@/features/letter/letter.feature";
 import { useRecoilValue } from "recoil";
 import { authState } from "@/atoms/auth/auth.atom";
 
-export const Letter = () => {
+export const TodayLetter = () => {
   const user = useRecoilValue(authState);
   const { value, onChange, setValue } = useInput("");
   const { sendTodayLetter, letters } = LetterFeature();
