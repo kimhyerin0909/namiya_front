@@ -27,7 +27,7 @@ export const AuthFeature = () => {
       localStorage.setItem("refreshToken", data.refreshToken);
       setUser(data.user);
       alert(data.message);
-      navigate("/");
+      navigate("/login");
     },
   });
 
